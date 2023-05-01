@@ -72,3 +72,7 @@ option{
 #falar:hover{
     background-color: cadetblue;
 }
+
+#vozes:disabled, #falar:disabled{
+    opacity: .1;
+}
