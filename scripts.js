@@ -27,3 +27,15 @@ vozes.addEventListener('change', () => {
     vozSelecionada = parseInt(vozes.value);
 });
 
+function updateStatus(){
+    if (window.speechSynthesis.speaking){
+        vozes.setAttribute('disabled', 'disabled');
+        falar.setAttribute('disabled', 'disabled');
+    }else{
+        vozes.removeAttribute('disabled');
+        falar.removeAttribute('disabled');
+    }
+}
+
+setInterval(updateStatus, 100);
+
